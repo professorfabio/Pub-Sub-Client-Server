@@ -1,6 +1,6 @@
 BROKER_ADDR = '32.195.37.234'
 BROKER_PORT = '9092'
-TOPIC1='MyFirstTopic'
-TOPIC2='MySecondTopic'
+TOPIC1 = 'MyFirstTopic'
+TOPIC2 = 'MySecondTopic'
 
 SERVER_ADDR = '100.30.2.247'
