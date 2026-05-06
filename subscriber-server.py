@@ -68,6 +68,6 @@ if __name__ == '__main__':
     t.start()
 
     # And run the service on the main thread:
-    app.run(host='0.0.0.0', port=const.SERVICE_PORT)
+    app.run(host='0.0.0.0', port=SERVICE_PORT)
 
     t.join()
