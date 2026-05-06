@@ -1,5 +1,12 @@
 from kafka import KafkaConsumer
+
+from flask import Flask
+from flask import jsonify
+from flask import request
+from flask import abort
+
 from const import *
+
 import sys
 
 try:
@@ -8,12 +15,19 @@ except:
     print('Topic not provided as command-line argument, using default')
     topic = TOPIC2
 
-# Create consumer: Option 1 -- only consumes new events (comment out Option 2 below)
-#consumer = KafkaConsumer(bootstrap_servers=[BROKER_ADDR + ':' + BROKER_PORT])
+###------------ Server Part ---------------
 
-# Create consumer: Option 2 -- consumes old events (comment out Option 1 above)
-consumer = KafkaConsumer(bootstrap_servers=[BROKER_ADDR + ':' + BROKER_PORT], auto_offset_reset='earliest')
+app = Flask(__name__)
+
+
+###------ Subscriber (consumer) Part ------
+def startConsumer():
+    # Create consumer: Option 1 -- only consumes new events (comment out Option 2 below)
+    #consumer = KafkaConsumer(bootstrap_servers=[BROKER_ADDR + ':' + BROKER_PORT])
+
+    # Create consumer: Option 2 -- consumes old events (comment out Option 1 above)
+    consumer = KafkaConsumer(bootstrap_servers=[BROKER_ADDR + ':' + BROKER_PORT], auto_offset_reset='earliest')
   
-consumer.subscribe([topic])
-for msg in consumer:
-    print (msg.value)
+    consumer.subscribe([topic])
+    for msg in consumer:
+        print (msg.value)
