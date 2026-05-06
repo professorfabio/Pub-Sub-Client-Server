@@ -4,4 +4,4 @@ TOPIC1 = 'MyFirstTopic'
 TOPIC2 = 'MySecondTopic'
 
 SERVER_ADDR = '100.30.2.247'
-SERVICE_PORT = '80'
+SERVICE_PORT = '5678'
