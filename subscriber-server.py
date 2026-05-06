@@ -50,7 +50,7 @@ def getAllEventData():
 @app.route('/eventdata/latest', methods=['GET'])
 def getLatestEventData():
     lastElement = eventDB[len(eventDB)-1]
-    return jsonify({'LastEventData':lastElment})
+    return jsonify({'LastEventData':lastElement})
 
 # Endpoint to consume the n-th event data:
 @app.route('/eventdata/<index>', methods=['GET'])
