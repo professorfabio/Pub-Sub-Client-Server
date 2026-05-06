@@ -6,7 +6,7 @@ try:
     topic = sys.argv[1]
 except:
     print('Topic not provided as command-line argument, using default')
-    topic = TOPIC1
+    topic = TOPIC2
 
 # Create consumer: Option 1 -- only consumes new events (comment out Option 2 below)
 #consumer = KafkaConsumer(bootstrap_servers=[BROKER_ADDR + ':' + BROKER_PORT])
