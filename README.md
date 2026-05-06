@@ -39,8 +39,9 @@ cd kafka_2.13-4.2.0/
 ```
 
 **Enable remote access to the broker:** Edit the file **config/server.properties** (in the kafka directory) in order to change the line starting with **advertised_listeners**, replacing (only) the first occurrence of **localhost** with the **IP address** of the machine where the Broker will run. It is recommended to use a fixed public IP address for this machine. That line should look like this (replacing the IP address, obviously):
-
+```
 advertised.listeners=PLAINTEXT://32.195.37.234:9092,CONTROLLER://localhost:9093
+```
 
 ##### Run the Kafka broker (either each time you start the server machine or put the following commands on a startup script): 
 - Create the metadata files with the configuration
