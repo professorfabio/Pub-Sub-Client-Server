@@ -56,8 +56,9 @@ def getLatestEventData():
 @app.route('/eventdata/<index>', methods=['GET'])
 def getNthEventData(index):
     eventData = None
+    i = int(index)
     try:
-        eventData = eventDB[index]
+        eventData = eventDB[i]
     except:
         eventData = 'Does not exist'
         
