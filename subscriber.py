@@ -67,3 +67,6 @@ def startConsumer():
     consumer.subscribe([topic])
     for msg in consumer:
         print (msg.value)
+        
+        # Append the event data (value) to the event database:
+        eventDB.append(msg.value)
