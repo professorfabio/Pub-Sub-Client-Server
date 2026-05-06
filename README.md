@@ -57,9 +57,7 @@ bin/kafka-storage.sh format --standalone -t $KAFKA_CLUSTER_ID -c config/server.p
 bin/kafka-server-start.sh config/server.properties
 ```
 
-#### For the clients (do this on all the machines where publishers and subscribers will run):
-
-##### Install the Kafka Python client (if not done yet)
+#### Install the Kafka Python client on all machines where publishers and subscribers will run (if not done yet)
 
 - Note: We use Python virtual environments for convenience (remember to always activate the virtual environment - 5th line below)
 ```
@@ -69,6 +67,11 @@ sudo apt install python3-venv
 python3 -m venv myvenv
 source myvenv/bin/activate
 pip3 install kafka-python
+```
+
+#### Install Flask on the machine where the Web service (subscriber-server.py) will run (only if not done yet):
+```
+pip install Flask
 ```
 
 ### Now run each process (publisher, publisher/subscriber, and consumer/server) on a separate machine
