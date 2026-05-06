@@ -11,7 +11,7 @@
 
 ## Installation instructions (Kafka etc.)
 
-### Follow these steps to run a Kafka broker on a server (with at least 2GB of RAM, such as AWS instance type t3-small):
+### Follow these steps to run a Kafka broker on a server machine (with at least 2GB of RAM, such as AWS instance type t3-small):
 
 - Open a command-line interface (shell) on the server
 
