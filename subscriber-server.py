@@ -27,10 +27,11 @@ def startConsumer():
   
     consumer.subscribe([topic])
     for msg in consumer:
-        print (msg.value)
+        msgValue = msg.value.decode('utf-8')
+        print (msgValue)
         
         # Append the event data (value) to the event database:
-        eventDB.append(msg.value)
+        eventDB.append(msgValue)
 
 ###------------ Server Part ---------------
 
