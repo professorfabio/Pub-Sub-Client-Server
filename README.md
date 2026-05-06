@@ -59,8 +59,9 @@ bin/kafka-server-start.sh config/server.properties
 
 #### For the clients (do this on all the machines where publishers and subscribers will run):
 
-##### Install the Kafka Python client
+##### Install the Kafka Python client (if not done yet)
 
+- Note: We use Python virtual environments for convenience (remember to always activate the virtual environment - 5th line below)
 ```
 sudo apt update
 sudo apt install python3-pip
