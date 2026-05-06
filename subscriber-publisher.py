@@ -21,6 +21,7 @@ consumer.subscribe([topic1])
 i = 0
 for msg in consumer:
     print (msg.value)
-    txt = 'My ' + str(i++) + ' message for ' + topic2
+    txt = 'My ' + str(i) + 'th message for ' + topic2
+    i = i + 1
     producer.send(topic2, value=txt.encode())
     producer.flush()
