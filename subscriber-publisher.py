@@ -17,10 +17,10 @@ consumer = KafkaConsumer(bootstrap_servers=[BROKER_ADDR + ':' + BROKER_PORT], au
 
 producer = KafkaProducer(bootstrap_servers=[BROKER_ADDR + ':' + BROKER_PORT])
 
-
 consumer.subscribe([topic1])
+i = 0
 for msg in consumer:
     print (msg.value)
-    txt = 'My message for ' + topic2
+    txt = 'My ' + str(i++) + ' message for ' + topic2
     producer.send(topic2, value=txt.encode())
     producer.flush()
