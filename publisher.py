@@ -5,6 +5,7 @@ import sys
 try:
     topic = sys.argv[1]
 except:
+    print ('Topic not provided as command-line argument, using default')
     topic = TOPIC1
     
 producer = KafkaProducer(bootstrap_servers=[BROKER_ADDR + ':' + BROKER_PORT])
