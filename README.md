@@ -1,4 +1,4 @@
-# An example that combines the pub-sub and client-server interaction paradigms
+# An example that combines the pub-sub and client-server interaction paradigms (with Kafka + RESTful)
 
 ## Overall architecture:
 ```
